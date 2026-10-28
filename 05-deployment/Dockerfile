@@ -12,5 +12,5 @@ RUN uv sync --locked --no-dev
 
 COPY model.py predict.py feature_defaults.json model_metadata.json pipeline.bin q6_test.py ./
 
-EXPOSE 9696
+EXPOSE 9690
 ENTRYPOINT ["uvicorn", "predict:app", "--host", "0.0.0.0", "--port", "9696"]
